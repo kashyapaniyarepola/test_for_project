@@ -37,12 +37,29 @@ class _HomeState extends State<Home> {
       ),
 
       body: Center(
-        child: FlatButton(
-          onPressed: () {
-                Navigator.pushNamed(context, '/breastcancer');
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: FlatButton(
+                onPressed: () {
+                      Navigator.pushNamed(context, '/breastcancer');
+                    },
+                   child: Text('Breast Cancer'),
+                   color: Colors.amber,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: FlatButton(onPressed: (){
+                Navigator.pushNamed(context, '/prediction');
               },
-             child: Text('Breast Cancer'),
-             color: Colors.amber,
+              child: Text("predict"),
+              color: Colors.amber,
+              ),
+            )
+          ],
         ),
         
       ),

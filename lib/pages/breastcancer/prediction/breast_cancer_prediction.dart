@@ -99,7 +99,7 @@ class _PredictionState extends State<Prediction> {
             Padding(
               padding: const EdgeInsets.fromLTRB(8.0, 0.0, 0.0, 0.0),
               child: Text(
-                "Take your time to fill the information",
+                "Take your time to fill the information (provide values atleast four decimal places)",
                 style: TextStyle(
                 fontSize: 18.0,
                 //fontWeight: FontWeight.w300,

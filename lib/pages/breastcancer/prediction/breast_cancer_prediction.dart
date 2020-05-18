@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:test_for_project/shared/loading.dart';
 import 'package:http/http.dart' as http;
@@ -950,13 +951,25 @@ class _PredictionState extends State<Prediction> {
                 onPressed: () async{
                   if (_formkey.currentState.validate()){
                     setState(() => loading=true);
-                    dynamic result = await _getResponse();
-                    if (result == null){
-                        setState(() { 
-                        error='Connection error of information error';
-                        loading=false;
-                        });
+                    
+                    try{
+                      final check = await InternetAddress.lookup("google.com");
+                      if (check.isNotEmpty && check[0].rawAddress.isNotEmpty){
+                        dynamic result = await _getResponse();
+                        if (result == null){
+                          setState(() { 
+                          error='Connection error or information error';
+                          loading=false;
+                          });
+                        }
                       }
+                    }on SocketException catch(e){
+                      setState(() { 
+                        error='Connection error or information error';
+                        loading=false;
+                      });
+                    }
+                    
                   }
                 }
                 ),
@@ -988,7 +1001,7 @@ Future _getResponse() async{
            
           });
         client.close();
-       return ('succes');
+       return ('success');
         
       }catch(e){
         print("Failed -> $e");

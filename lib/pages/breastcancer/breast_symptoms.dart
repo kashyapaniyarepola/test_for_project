@@ -77,7 +77,7 @@ class _SymptomsState extends State<Symptoms> {
                                     child: Text(early[index], 
                                     style: TextStyle(
                                       fontSize: 16,
-                                      fontFamily: 'KaushanScript',
+                                      fontFamily: 'Cairo',
                                       ),
                                     ),
                                   ),
@@ -107,7 +107,7 @@ class _SymptomsState extends State<Symptoms> {
                                     child: Text(invasive[index], 
                                     style: TextStyle(
                                       fontSize: 16,
-                                      fontFamily: 'KaushanScript',
+                                      fontFamily: 'Cairo',
                                       ),
                                     ),
                                   ),

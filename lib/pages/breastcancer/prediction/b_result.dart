@@ -25,7 +25,7 @@ class _BresultState extends State<Bresult> {
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 32.0,
-                        fontFamily: 'KaushanScript',
+                        fontFamily: 'Cairo',
                       ),
                     ),
                   ),
@@ -45,7 +45,7 @@ class _BresultState extends State<Bresult> {
             'Meet your doctor immediately ',
             style: TextStyle(
                         fontSize: 16.0,
-                        fontFamily: 'KaushanScript',
+                        fontFamily: 'Cairo',
             ),
         softWrap: true,  
       ),
@@ -60,7 +60,7 @@ class _BresultState extends State<Bresult> {
             'Before you leave be aware of precausions',
             style: TextStyle(
                         fontSize: 16.0,
-                        fontFamily: 'KaushanScript',
+                        fontFamily: 'Cairo',
                         backgroundColor: Colors.grey[200],
                         fontWeight: FontWeight.w100
             ),
@@ -77,7 +77,7 @@ class _BresultState extends State<Bresult> {
             'Check if you have the following symptoms',
             style: TextStyle(
                         fontSize: 16.0,
-                        fontFamily: 'KaushanScript',
+                        fontFamily: 'Cairo',
                         backgroundColor: Colors.grey[200],
                         fontWeight: FontWeight.w100
             ),

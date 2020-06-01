@@ -26,7 +26,7 @@ class _BrestCancerState extends State<BrestCancer> {
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 28.0,
-                        fontFamily: 'KaushanScript',
+                        fontFamily: 'Cairo',
                       ),
                     ),
                   ),
@@ -81,7 +81,7 @@ class _BrestCancerState extends State<BrestCancer> {
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 20.0,
-                        fontFamily: 'KaushanScript',
+                        fontFamily: 'Cairo',
                       ),
                     ),
                   ),
@@ -93,7 +93,7 @@ class _BrestCancerState extends State<BrestCancer> {
                         style: TextStyle(
                           fontWeight: FontWeight.w100,
                           fontSize: 16.0,
-                          fontFamily: 'KaushanScript',
+                          fontFamily: 'Cairo',
                         ),
                       ),
                   ),
@@ -156,7 +156,7 @@ class _BrestCancerState extends State<BrestCancer> {
                   child: Text(
                     label,
                     style: TextStyle(
-                      fontFamily: 'KaushanScript',
+                      fontFamily: 'Cairo',
                     ),
                     ),
                 ),

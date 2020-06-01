@@ -80,7 +80,7 @@ class _PredictionState extends State<Prediction> {
               'Get acquainted with our system before getting started',
               style: TextStyle(
                           fontSize: 20.0,
-                          fontFamily: 'KaushanScript',
+                          fontFamily: 'Cairo',
                           backgroundColor: Colors.grey[300],
                           fontWeight: FontWeight.w100
               ),
@@ -105,7 +105,7 @@ class _PredictionState extends State<Prediction> {
                 fontSize: 18.0,
                 //fontWeight: FontWeight.w300,
                 color: Colors.black,
-                fontFamily: 'KaushanScript'
+                fontFamily: 'Cairo'
                 ),
               ),
             ),
@@ -125,7 +125,7 @@ class _PredictionState extends State<Prediction> {
                               "  Breast Radius  ",
                               style: TextStyle(
                                 fontSize: 16.0,
-                                fontFamily: 'KaushanScript',
+                                fontFamily: 'Cairo',
                                 backgroundColor: Colors.grey[300],
                                 fontWeight: FontWeight.w100
                               ),
@@ -207,7 +207,7 @@ class _PredictionState extends State<Prediction> {
                               "  Texture of a Breast  ",
                               style: TextStyle(
                                 fontSize: 16.0,
-                                fontFamily: 'KaushanScript',
+                                fontFamily: 'Cairo',
                                 backgroundColor: Colors.grey[300],
                                 fontWeight: FontWeight.w100
                               ),
@@ -289,7 +289,7 @@ class _PredictionState extends State<Prediction> {
                               "  Breast Perimeter  ",
                               style: TextStyle(
                                 fontSize: 16.0,
-                                fontFamily: 'KaushanScript',
+                                fontFamily: 'Cairo',
                                 backgroundColor: Colors.grey[300],
                                 fontWeight: FontWeight.w100
                               ),
@@ -371,7 +371,7 @@ class _PredictionState extends State<Prediction> {
                               "  Area of the Breast  ",
                               style: TextStyle(
                                 fontSize: 16.0,
-                                fontFamily: 'KaushanScript',
+                                fontFamily: 'Cairo',
                                 backgroundColor: Colors.grey[300],
                                 fontWeight: FontWeight.w100
                               ),
@@ -453,7 +453,7 @@ class _PredictionState extends State<Prediction> {
                               "  Smoothness of Breast  ",
                               style: TextStyle(
                                 fontSize: 16.0,
-                                fontFamily: 'KaushanScript',
+                                fontFamily: 'Cairo',
                                 backgroundColor: Colors.grey[300],
                                 fontWeight: FontWeight.w100
                               ),
@@ -535,7 +535,7 @@ class _PredictionState extends State<Prediction> {
                               "  Breast Compactness  ",
                               style: TextStyle(
                                 fontSize: 16.0,
-                                fontFamily: 'KaushanScript',
+                                fontFamily: 'Cairo',
                                 backgroundColor: Colors.grey[300],
                                 fontWeight: FontWeight.w100
                               ),
@@ -617,7 +617,7 @@ class _PredictionState extends State<Prediction> {
                               "  Concavity in Breast  ",
                               style: TextStyle(
                                 fontSize: 16.0,
-                                fontFamily: 'KaushanScript',
+                                fontFamily: 'Cairo',
                                 backgroundColor: Colors.grey[300],
                                 fontWeight: FontWeight.w100
                               ),
@@ -699,7 +699,7 @@ class _PredictionState extends State<Prediction> {
                               "  Concave Points (Number of concave portions of the contour)  ",
                               style: TextStyle(
                                 fontSize: 16.0,
-                                fontFamily: 'KaushanScript',
+                                fontFamily: 'Cairo',
                                 backgroundColor: Colors.grey[300],
                                 fontWeight: FontWeight.w100
                               ),
@@ -781,7 +781,7 @@ class _PredictionState extends State<Prediction> {
                               "  Breast Symmetry  ",
                               style: TextStyle(
                                 fontSize: 16.0,
-                                fontFamily: 'KaushanScript',
+                                fontFamily: 'Cairo',
                                 backgroundColor: Colors.grey[300],
                                 fontWeight: FontWeight.w100
                               ),
@@ -863,7 +863,7 @@ class _PredictionState extends State<Prediction> {
                               "  Fractal Dimension  ",
                               style: TextStyle(
                                 fontSize: 16.0,
-                                fontFamily: 'KaushanScript',
+                                fontFamily: 'Cairo',
                                 backgroundColor: Colors.grey[300],
                                 fontWeight: FontWeight.w100
                               ),

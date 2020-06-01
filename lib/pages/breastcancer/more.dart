@@ -134,7 +134,7 @@ class _TitlesState extends State<Titles> {
                   child: Text(widget.text1, 
                   style: TextStyle(
                     fontSize: 16,
-                    fontFamily: 'KaushanScript',
+                    fontFamily: 'Cairo',
                     ),
                   ),
                 ),

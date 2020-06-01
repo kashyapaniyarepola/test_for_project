@@ -20,8 +20,8 @@ class Solutions extends StatelessWidget {
       'assets/nosmoke.gif',
       'assets/noweight.gif',
       'assets/feed.gif',
-      'assets/nosmoke.gif',
-      'assets/nosmoke.gif',
+      'assets/Hormone_Therapy.jpg',
+      'assets/pollution.jpg',
     ];
   
     return Scaffold(
@@ -53,7 +53,7 @@ class Solutions extends StatelessWidget {
                       style: TextStyle(
                         fontSize:17, 
                         fontWeight: FontWeight.w800,
-                        fontFamily: 'KaushanScript',
+                        fontFamily: 'Cairo',
                         ) 
                       )
                     ),

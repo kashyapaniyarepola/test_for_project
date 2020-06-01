@@ -16,7 +16,7 @@ class _HomeState extends State<Home> {
             fontSize: 30.0,
             fontWeight: FontWeight.bold,
             color: Colors.black,
-            fontFamily: 'KaushanScript'
+            fontFamily: 'Cairo'
           ),
         ),
         actions: <Widget>[

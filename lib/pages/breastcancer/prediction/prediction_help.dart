@@ -68,7 +68,7 @@ class _PredictionHelpState extends State<PredictionHelp> {
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
                       fontSize: 28.0,
-                      fontFamily: 'KaushanScript',
+                      fontFamily: 'Cairo',
                     ),
                   ),
                 ),   
@@ -102,7 +102,7 @@ class _PredictionHelpState extends State<PredictionHelp> {
           style: TextStyle(
             fontWeight: FontWeight.w500,
             fontSize: 20.0,
-            fontFamily: 'KaushanScript',
+            fontFamily: 'Cairo',
             backgroundColor: Colors.grey[400],
           ),
         ),
@@ -123,7 +123,7 @@ class _PredictionHelpState extends State<PredictionHelp> {
                   style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 20.0,
-                        fontFamily: 'KaushanScript',
+                        fontFamily: 'Cairo',
                       ),
                   ),
               ),

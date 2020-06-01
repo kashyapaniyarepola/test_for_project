@@ -26,7 +26,7 @@ class _GresultState extends State<Gresult> {
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 32.0,
-                        fontFamily: 'KaushanScript',
+                        fontFamily: 'Cairo',
                       ),
                     ),
                   ),
@@ -45,7 +45,7 @@ class _GresultState extends State<Gresult> {
             '',
             style: TextStyle(
                         fontSize: 16.0,
-                        fontFamily: 'KaushanScript',
+                        fontFamily: 'Cairo',
             ),
         softWrap: true,  
       ),
@@ -60,7 +60,7 @@ class _GresultState extends State<Gresult> {
             'Before you leave be aware of precausions',
             style: TextStyle(
                         fontSize: 16.0,
-                        fontFamily: 'KaushanScript',
+                        fontFamily: 'Cairo',
                         backgroundColor: Colors.grey[200],
                         fontWeight: FontWeight.w100
             ),

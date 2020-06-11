@@ -22,7 +22,7 @@ class _HomeState extends State<Home> {
         actions: <Widget>[
           FlatButton.icon(
             onPressed: (){
-              Navigator.pushNamed(context, '/profile');
+              Navigator.pushNamed(context, '/userhelp');
             }, 
             icon: Icon(
               Icons.person,

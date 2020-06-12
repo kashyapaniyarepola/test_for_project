@@ -10,6 +10,7 @@ import 'package:test_for_project/pages/breastcancer/prediction/g_result.dart';
 import 'package:test_for_project/pages/breastcancer/prediction/b_result.dart';
 import 'package:test_for_project/pages/breastcancer/prediction/prediction_help.dart';
 import 'package:test_for_project/pages/aboutus.dart';
+import 'package:test_for_project/pages/onb.dart';
 
 void main() => runApp(MaterialApp(
   initialRoute : '/',
@@ -25,5 +26,6 @@ void main() => runApp(MaterialApp(
     '/gresult':(context)=>Gresult(),
     '/bresult':(context)=>Bresult(),
     '/predictionhelp':(context)=>PredictionHelp(),
+    '/onb':(context)=>OnboardingScreen(),
   },
 ));

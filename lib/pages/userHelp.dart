@@ -24,10 +24,16 @@ class _UserHelpState extends State<UserHelp> {
       ),
        body:ListView(
         children: <Widget>[
+          Image.asset(
+            'assets/guide/Doctor.png',
+            width: 600,
+            height: 300,
+            fit: BoxFit.cover,
+          ),
           _buildTextRow('What is MobileDoctor..?'),
           _buildTextContainer("MobileDoctor is a health care decision support application. "
-          "You can get details, predictions and reminders of a disease from one place "
-          "MobileDoctor uses machine learning models with an accuracy level of over 97%. "
+          "You can get details, predictions and reminders of a disease from one place. "
+          "MobileDoctor uses machine learning models with accuracy levels of over 97%. "
           "So, try it out... "
           ),
           
@@ -37,9 +43,35 @@ class _UserHelpState extends State<UserHelp> {
             child: Card(
               child: Container(
                 child:Column(children: <Widget>[
-                  _buildText('  How to predict a disease...  ') ,
-                  _buildTextContainer('Click the name Doctor'),
-                  _buildContainerColumn('assets/pe.jpg'),
+                  _buildText('  Open chat-bot...  ') ,
+                  _buildTextContainer('Click the disease(except Breast cancer) you want then Click "Doctor" button'),
+                  _buildContainerColumn('assets/guide/Click doctor_1.gif'),
+                ],)
+            
+              )
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Card(
+              child: Container(
+                child:Column(children: <Widget>[
+                  _buildText('  Start predicting...  ') ,
+                  _buildTextContainer('Open chat-bot then say "Hi" '),
+                  _buildContainerColumn('assets/guide/say hi_1.gif'),
+                ],)
+            
+              )
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Card(
+              child: Container(
+                child:Column(children: <Widget>[
+                  _buildText('  Predict Breast Cancer...  ') ,
+                  _buildTextContainer('Scroll down for Breast cancer the click "Doctor" button'),
+                  _buildContainerColumn('assets/guide/Kshyapa form click_1.gif'),
                 ],)
             
               )
@@ -51,8 +83,8 @@ class _UserHelpState extends State<UserHelp> {
               child: Container(
                 child:Column(children: <Widget>[
                   _buildText('  Get disease information...  ') ,
-                  _buildTextContainer('Click the name Details'),
-                  _buildContainerColumn('assets/DCIS-1.jpg'),
+                  _buildTextContainer('Select a disease then click the "Description" button '),
+                  _buildContainerColumn('assets/guide/Description click_1.gif'),
                 ],)
             
               )
@@ -64,8 +96,8 @@ class _UserHelpState extends State<UserHelp> {
               child: Container(
                 child:Column(children: <Widget>[
                   _buildText('  Activate notification alert...  ') ,
-                  _buildTextContainer('Click the name bell icon'),
-                  _buildContainerColumn('assets/DCIS-1.jpg'),
+                  _buildTextContainer('Click notification you want to activate then click the bell icon'),
+                  _buildContainerColumn('assets/guide/notification on_1.gif'),
                 ],)
             
               )
@@ -78,7 +110,7 @@ class _UserHelpState extends State<UserHelp> {
                 child:Column(children: <Widget>[
                   _buildText('  Get current situation of your disease.  ') ,
                   _buildTextContainer('Go to your profile..'),
-                  _buildContainerColumn('assets/DCIS-1.jpg'),
+                  _buildContainerColumn('assets/guide/Profile click_2.gif'),
                 ],)
             
               )
@@ -89,7 +121,7 @@ class _UserHelpState extends State<UserHelp> {
               padding: const EdgeInsets.fromLTRB(100.0, 0.0, 100.0, 8.0),
               child: FlatButton.icon(
               onPressed: (){
-                Navigator.pushNamed(context, '/');
+                Navigator.pushReplacementNamed(context, '/');
               }, 
               icon: Icon(Icons.keyboard_arrow_right),
                 label: Expanded(
@@ -133,14 +165,44 @@ class _UserHelpState extends State<UserHelp> {
                 
                 Container(
                   padding: const EdgeInsets.only(bottom: 0),
-                  child: Text(
-                    label ,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 28.0,
-                      fontFamily: 'Cairo',
-                    ),
+                  child: Stack(
+                    children: <Widget>[
+                      // Stroked text as border.
+                      Text(
+                        label,
+                        style: TextStyle(
+                          fontSize: 36,
+                          foreground: Paint()
+                            ..style = PaintingStyle.stroke
+                            ..strokeWidth = 6
+                            ..color = Colors.blue[700],
+                        ),
+                      ),
+                      // Solid text as fill.
+                      Text(
+                        label,
+                        style: TextStyle(
+                          fontSize: 36,
+                          color: Colors.grey[300],
+                        ),
+                      ),
+                    ],
                   ),
+                  // child: Text(
+                  //   label ,
+                  //   style: TextStyle(
+                  //     // fontWeight: FontWeight.w500,
+                  //     fontSize: 28.0,
+                  //     fontFamily: 'Cairo',
+                  //     foreground: Paint()
+                  //       ..style = PaintingStyle.stroke
+                  //       ..strokeWidth = 6
+                  //       ..color = Colors.blue[700],
+                  //     // decoration: TextDecoration.underline,
+                  //     // decorationColor: Colors.blueAccent,
+                  //     // decorationStyle: TextDecorationStyle.wavy,
+                  //   ),
+                  // ),
                 ),   
               ],
             ),
@@ -156,8 +218,8 @@ class _UserHelpState extends State<UserHelp> {
       child: Text(
         text,
             style: TextStyle(
-                        fontSize: 16.0,
-                        fontFamily: 'Cairo',
+                fontSize: 16.0,
+                fontFamily: 'Cairo',
             ),
         softWrap: true,  
       ),
@@ -167,14 +229,28 @@ class _UserHelpState extends State<UserHelp> {
    Container _buildText(String text) {
     return Container(
       padding: const EdgeInsets.fromLTRB(0.0, 0, 0.0, 8.0),
-      child: Text(
-        text,
-          style: TextStyle(
-            fontWeight: FontWeight.w500,
-            fontSize: 18.0,
-            fontFamily: 'Cairo',
-            backgroundColor: Colors.lightGreen,
-          ),
+      child:Stack(
+          children: <Widget>[
+            // Stroked text as border.
+            Text(
+              text,
+              style: TextStyle(
+                fontSize: 18,
+                foreground: Paint()
+                  ..style = PaintingStyle.stroke
+                  ..strokeWidth = 6
+                  ..color = Colors.green[800],
+              ),
+            ),
+            // Solid text as fill.
+            Text(
+              text,
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.grey[300],
+              ),
+            ),
+          ],
         ),
     );
   }

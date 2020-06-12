@@ -62,7 +62,7 @@ Widget titleSection = Container(
            Padding(
              padding: const EdgeInsets.all(8.0),
              child: Image.asset(
-              'assets/us.jpg',
+              'assets/guide/us.jpg',
               width: 500,
               height: 300,
               fit: BoxFit.cover,
@@ -89,13 +89,28 @@ Widget titleSection = Container(
                 
                 Container(
                   padding: const EdgeInsets.only(bottom: 0),
-                  child: Text(
-                    label ,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 28.0,
-                      fontFamily: 'Cairo',
-                    ),
+                  child: Stack(
+                    children: <Widget>[
+                      // Stroked text as border.
+                      Text(
+                        label,
+                        style: TextStyle(
+                          fontSize: 36,
+                          foreground: Paint()
+                            ..style = PaintingStyle.stroke
+                            ..strokeWidth = 6
+                            ..color = Colors.brown[700],
+                        ),
+                      ),
+                      // Solid text as fill.
+                      Text(
+                        label,
+                        style: TextStyle(
+                          fontSize: 36,
+                          color: Colors.grey[300],
+                        ),
+                      ),
+                    ],
                   ),
                 ),   
               ],

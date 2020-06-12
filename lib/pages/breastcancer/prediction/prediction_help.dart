@@ -63,13 +63,28 @@ class _PredictionHelpState extends State<PredictionHelp> {
                 
                 Container(
                   padding: const EdgeInsets.only(bottom: 0),
-                  child: Text(
-                    label ,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 28.0,
-                      fontFamily: 'Cairo',
-                    ),
+                  child: Stack(
+                    children: <Widget>[
+                      // Stroked text as border.
+                      Text(
+                        label,
+                        style: TextStyle(
+                          fontSize: 28,
+                          foreground: Paint()
+                            ..style = PaintingStyle.stroke
+                            ..strokeWidth = 6
+                            ..color = Colors.blue[700],
+                        ),
+                      ),
+                      // Solid text as fill.
+                      Text(
+                        label,
+                        style: TextStyle(
+                          fontSize: 28,
+                          color: Colors.grey[300],
+                        ),
+                      ),
+                    ],
                   ),
                 ),   
               ],
@@ -103,7 +118,9 @@ class _PredictionHelpState extends State<PredictionHelp> {
             fontWeight: FontWeight.w500,
             fontSize: 20.0,
             fontFamily: 'Cairo',
-            backgroundColor: Colors.grey[400],
+            // backgroundColor: Colors.grey[400],
+            decoration: TextDecoration.underline,
+            decorationColor: Colors.redAccent,
           ),
         ),
     );
@@ -118,14 +135,29 @@ class _PredictionHelpState extends State<PredictionHelp> {
               padding: const EdgeInsets.fromLTRB(8.0, 0.0, 0.0, 0.0),
               child: Align(
                 alignment: Alignment.centerLeft,
-                child:Text(
-                  label,
-                  style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 20.0,
-                        fontFamily: 'Cairo',
+                child:Stack(
+                  children: <Widget>[
+                    // Stroked text as border.
+                    Text(
+                      label,
+                      style: TextStyle(
+                        fontSize: 18,
+                        foreground: Paint()
+                          ..style = PaintingStyle.stroke
+                          ..strokeWidth = 6
+                          ..color = Colors.green[800],
                       ),
-                  ),
+                    ),
+                    // Solid text as fill.
+                    Text(
+                      label,
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.grey[300],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             Padding(

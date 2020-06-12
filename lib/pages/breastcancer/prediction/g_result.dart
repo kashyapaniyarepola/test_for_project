@@ -21,14 +21,30 @@ class _GresultState extends State<Gresult> {
                   /*2*/
                   Container(
                     padding: const EdgeInsets.only(bottom: 0),
-                    child: Text(
-                      'You have a Good News...!',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 32.0,
-                        fontFamily: 'Cairo',
-                      ),
+                    child: Stack(
+                      children: <Widget>[
+                        // Stroked text as border.
+                        Text(
+                          'You have a Good News...!',
+                          style: TextStyle(
+                            fontSize: 32,
+                            foreground: Paint()
+                              ..style = PaintingStyle.stroke
+                              ..strokeWidth = 6
+                              ..color = Colors.green[800],
+                          ),
+                        ),
+                        // Solid text as fill.
+                        Text(
+                          'You have a Good News...!',
+                          style: TextStyle(
+                            fontSize: 32,
+                            color: Colors.grey[300],
+                          ),
+                        ),
+                      ],
                     ),
+                    
                   ),
                   
                 ],
@@ -40,15 +56,30 @@ class _GresultState extends State<Gresult> {
 
     Widget textSection = Container(
       padding: const EdgeInsets.fromLTRB(16.0, 8.0, 8.0, 8.0),
-      child: Text(
-        'Good news....!! You have only 3% of havin cancer.  '
-            '',
+      child: Stack(
+        children: <Widget>[
+          // Stroked text as border.
+          Text(
+            'Good news....!! You have only 3% of having cancer.',
             style: TextStyle(
-                        fontSize: 16.0,
-                        fontFamily: 'Cairo',
+              fontSize: 16,
+              foreground: Paint()
+                ..style = PaintingStyle.stroke
+                ..strokeWidth = 4
+                ..color = Colors.green[700],
             ),
-        softWrap: true,  
+          ),
+          // Solid text as fill.
+          Text(
+            'Good news....!! You have only 3% of having cancer.',
+            style: TextStyle(
+              fontSize: 16,
+              color: Colors.grey[300],
+            ),
+          ),
+        ],
       ),
+      
     );
     Widget buttonSection = Container(
       padding: const EdgeInsets.fromLTRB(8.0, 8.0, 8.0, 8.0),

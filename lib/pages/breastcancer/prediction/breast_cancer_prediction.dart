@@ -99,15 +99,30 @@ class _PredictionState extends State<Prediction> {
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(8.0, 0.0, 0.0, 0.0),
-              child: Text(
-                "Take your time to fill the information (provide values atleast four decimal places)",
-                style: TextStyle(
-                fontSize: 18.0,
-                //fontWeight: FontWeight.w300,
-                color: Colors.black,
-                fontFamily: 'Cairo'
+              child: Stack(
+                  children: <Widget>[
+                    // Stroked text as border.
+                    Text(
+                      "Take your time to fill the information (provide values atleast four decimal places)",
+                      style: TextStyle(
+                        fontSize: 18,
+                        foreground: Paint()
+                          ..style = PaintingStyle.stroke
+                          ..strokeWidth = 3
+                          ..color = Colors.red[800],
+                      ),
+                    ),
+                    // Solid text as fill.
+                    Text(
+                      "Take your time to fill the information (provide values atleast four decimal places)",
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.grey[300],
+                      ),
+                    ),
+                  ],
                 ),
-              ),
+              
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 10, 10, 10),
@@ -119,18 +134,7 @@ class _PredictionState extends State<Prediction> {
                       children: <Widget>[
                         Column (
                         children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0.0, 8.0, 8.0, 8.0),
-                            child: Text(
-                              "  Breast Radius  ",
-                              style: TextStyle(
-                                fontSize: 16.0,
-                                fontFamily: 'Cairo',
-                                backgroundColor: Colors.grey[300],
-                                fontWeight: FontWeight.w100
-                              ),
-                            )
-                          ),
+                          _buildText("Breast Radius"),
                           Row(
                           children: <Widget>[
                             Expanded(
@@ -201,18 +205,7 @@ class _PredictionState extends State<Prediction> {
                         ),
                         Column (
                         children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0.0, 8.0, 8.0, 8.0),
-                            child: Text(
-                              "  Texture of a Breast  ",
-                              style: TextStyle(
-                                fontSize: 16.0,
-                                fontFamily: 'Cairo',
-                                backgroundColor: Colors.grey[300],
-                                fontWeight: FontWeight.w100
-                              ),
-                              ),
-                          ),
+                          _buildText("Texture of a Breast "),
                           Row(
                           children: <Widget>[
                             Expanded(
@@ -283,18 +276,8 @@ class _PredictionState extends State<Prediction> {
                         ), 
                         Column (
                         children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0.0, 8.0, 8.0, 8.0),
-                            child: Text(
-                              "  Breast Perimeter  ",
-                              style: TextStyle(
-                                fontSize: 16.0,
-                                fontFamily: 'Cairo',
-                                backgroundColor: Colors.grey[300],
-                                fontWeight: FontWeight.w100
-                              ),
-                              ),
-                          ),
+                          _buildText("Breast Perimeter"),
+                          
                           Row(
                           children: <Widget>[
                             Expanded(
@@ -365,18 +348,8 @@ class _PredictionState extends State<Prediction> {
                         ), 
                         Column (
                         children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0.0, 8.0, 8.0, 8.0),
-                            child: Text(
-                              "  Area of the Breast  ",
-                              style: TextStyle(
-                                fontSize: 16.0,
-                                fontFamily: 'Cairo',
-                                backgroundColor: Colors.grey[300],
-                                fontWeight: FontWeight.w100
-                              ),
-                              ),
-                          ),
+                          _buildText("Area of the Breast"),
+                          
                           Row(
                           children: <Widget>[
                             Expanded(
@@ -447,18 +420,8 @@ class _PredictionState extends State<Prediction> {
                         ), 
                         Column (
                         children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0.0, 8.0, 8.0, 8.0),
-                            child: Text(
-                              "  Smoothness of Breast  ",
-                              style: TextStyle(
-                                fontSize: 16.0,
-                                fontFamily: 'Cairo',
-                                backgroundColor: Colors.grey[300],
-                                fontWeight: FontWeight.w100
-                              ),
-                              ),
-                          ),
+                          _buildText("Smoothness of Breast"),
+                          
                           Row(
                           children: <Widget>[
                             Expanded(
@@ -529,18 +492,8 @@ class _PredictionState extends State<Prediction> {
                         ), 
                         Column (
                         children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0.0, 8.0, 8.0, 8.0),
-                            child: Text(
-                              "  Breast Compactness  ",
-                              style: TextStyle(
-                                fontSize: 16.0,
-                                fontFamily: 'Cairo',
-                                backgroundColor: Colors.grey[300],
-                                fontWeight: FontWeight.w100
-                              ),
-                              ),
-                          ),
+                          _buildText("Breast Compactness"),
+                          
                           Row(
                           children: <Widget>[
                             Expanded(
@@ -611,18 +564,8 @@ class _PredictionState extends State<Prediction> {
                         ), 
                         Column (
                         children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0.0, 8.0, 8.0, 8.0),
-                            child: Text(
-                              "  Concavity in Breast  ",
-                              style: TextStyle(
-                                fontSize: 16.0,
-                                fontFamily: 'Cairo',
-                                backgroundColor: Colors.grey[300],
-                                fontWeight: FontWeight.w100
-                              ),
-                              ),
-                          ),
+                          _buildText("Concavity in Breast"),
+                          
                           Row(
                           children: <Widget>[
                             Expanded(
@@ -693,18 +636,8 @@ class _PredictionState extends State<Prediction> {
                         ), 
                         Column (
                         children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0.0, 8.0, 8.0, 8.0),
-                            child: Text(
-                              "  Concave Points (Number of concave portions of the contour)  ",
-                              style: TextStyle(
-                                fontSize: 16.0,
-                                fontFamily: 'Cairo',
-                                backgroundColor: Colors.grey[300],
-                                fontWeight: FontWeight.w100
-                              ),
-                              ),
-                          ),
+                          _buildText("Concave Points (Number of concave portions of the contour)"),
+                          
                           Row(
                           children: <Widget>[
                             Expanded(
@@ -775,18 +708,8 @@ class _PredictionState extends State<Prediction> {
                         ), 
                         Column (
                         children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0.0, 8.0, 8.0, 8.0),
-                            child: Text(
-                              "  Breast Symmetry  ",
-                              style: TextStyle(
-                                fontSize: 16.0,
-                                fontFamily: 'Cairo',
-                                backgroundColor: Colors.grey[300],
-                                fontWeight: FontWeight.w100
-                              ),
-                              ),
-                          ),
+                          _buildText("Breast Symmetry"),
+                          
                           Row(
                           children: <Widget>[
                             Expanded(
@@ -857,18 +780,8 @@ class _PredictionState extends State<Prediction> {
                         ), 
                         Column (
                         children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0.0, 8.0, 8.0, 8.0),
-                            child: Text(
-                              "  Fractal Dimension  ",
-                              style: TextStyle(
-                                fontSize: 16.0,
-                                fontFamily: 'Cairo',
-                                backgroundColor: Colors.grey[300],
-                                fontWeight: FontWeight.w100
-                              ),
-                              ),
-                          ),
+                          _buildText("Fractal Dimension"),
+                          
                           Row(
                           children: <Widget>[
                             Expanded(
@@ -1018,6 +931,35 @@ void _insertSingleItem(String message){
   }
   print(message);
   setState(() => loading=false);
+  }
+
+   Container _buildText(String text) {
+    return Container(
+      padding: const EdgeInsets.fromLTRB(0.0, 8.0, 8.0, 8.0),
+      child:Stack(
+          children: <Widget>[
+            // Stroked text as border.
+            Text(
+              text,
+              style: TextStyle(
+                fontSize: 18,
+                foreground: Paint()
+                  ..style = PaintingStyle.stroke
+                  ..strokeWidth = 6
+                  ..color = Colors.green[800],
+              ),
+            ),
+            // Solid text as fill.
+            Text(
+              text,
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.grey[300],
+              ),
+            ),
+          ],
+        ),
+    );
   }
 
 }

@@ -927,7 +927,7 @@ void _insertSingleItem(String message){
   if (message=='0'){
     Navigator.pushNamed(context, '/gresult'); 
   }else{
-    Navigator.pushNamed(context, '/presult');
+    Navigator.pushNamed(context, '/bresult');
   }
   print(message);
   setState(() => loading=false);
@@ -964,3 +964,33 @@ void _insertSingleItem(String message){
 
 }
 
+// TextSpan(
+//   text:
+//   '${userData['Breast_canser'] == null ? 'Not predicted yet' : "${userData['Breast_canser'].split('_')[0]}" == '3.0' ? 'Breast cancer does not exist' : 'Breast cancer exist'}',
+//   style: TextStyle(
+//       fontWeight:
+//       FontWeight.bold,
+//       color: userData['Breast_canser'] !=
+//           null &&
+//           userData['Breast_canser']
+//               .split(
+//               '_')[0] !=
+//               '3.0'
+//           ? Colors.red
+//           : Colors.green))
+
+TextSpan(
+  text:
+  '${userData['Breast_canser'] == null ? 'Not predicted yet' : "${userData['Breast_canser'].split('_')[0]}%"}',
+  style: TextStyle(
+      fontWeight:
+      FontWeight.bold,
+      color: userData['Breast_canser'] !=
+          null &&
+          double.parse(userData[
+            'Breast_canser']
+                .split(
+                '_')[0]) >
+              30
+          ? Colors.red
+          : Colors.green))
